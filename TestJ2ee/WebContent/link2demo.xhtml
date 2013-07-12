@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <!-- 
+        f:viewParam dans f:metadata appele le setter
+        f:metadata doit être placé dans la view et pas dans un template 
+        http://stackoverflow.com/questions/9553659/jsf-fviewparam-not-calling-setter-if-located-in-template-xhtml
+        http://stackoverflow.com/questions/9856847/where-is-the-best-place-for-the-fmetadata-element
+    -->
+    <f:metadata>
+        <f:viewParam name="id" value="#{linkBackingBean.id}"/>
+        <!-- 
+            Pour déclencher un event avant le rendu de la view, ce qui permet par exemple de réinitialiser le bean
+            <f:event type="preRenderView" listener="#{linkBackingBean.initId}" /> 
+        -->
+    </f:metadata>
+    <h:head>
+        <title>link2demo</title>
+    </h:head>
+    <h:body>
+        <h1>Hello from link2demo.xhtml</h1>
+        #{linkBackingBean.id}
+    </h:body>
+</html>
+

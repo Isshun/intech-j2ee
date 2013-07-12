@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        A Random login form
+        <h:form>        
+            <h:outputLabel>Title</h:outputLabel>
+            <h:selectOneMenu value="#{randomSignin.title}">
+                <f:selectItems value="#{randomSignin.titles}" />
+            </h:selectOneMenu>
+            <h:outputLabel>Login</h:outputLabel>
+            <h:inputText/>
+            <h:outputLabel>Password</h:outputLabel>
+            <h:inputSecret/>
+            <h:outputLabel>Percent</h:outputLabel>
+            <h:inputText value="#{randomSignin.percent}"/>
+            <h:commandButton action="#{randomSignin.signup}" value="Random login"/>
+        </h:form>
+    </h:body>
+</html>

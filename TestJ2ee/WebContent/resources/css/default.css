@@ -1,0 +1,16 @@
+/* 
+    Document   : default.css
+    Created on : Jul 6, 2012, 5:07:50 PM
+    Author     : thomasgros
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+body {
+    background-color:#cccccc;
+}
+
